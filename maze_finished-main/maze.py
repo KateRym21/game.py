@@ -57,15 +57,18 @@ win_width = 700
 win_height = 500
 window = display.set_mode((win_width, win_height))
 display.set_caption("Maze")
-background = transform.scale(image.load('background.jpg'), (win_width, win_height ))
+background = transform.scale(image.load('neoncity.jpg'), (win_width, win_height ))
 
-player = Player('hero.png', 5, win_height - 80, 4)
-monster = Enemy('cyborg.png', win_width - 80, 280, 2)
+player = Player('fraude.png', 5, win_height - 80, 4)
+monster = Enemy('enemy.png', win_width - 80, 280, 2)
 final = GameSprite('treasure.png', win_width - 120, win_height - 80, 0)
 
 w1 = Wall(154, 205, 50, 100, 20, 450, 10)
 w2 = Wall(154, 205, 50, 100, 480, 350, 10)
-w3 = Wall(154, 205, 50, 100, 20, 10, 380)
+w3 = Wall(154, 205, 50, 350, 250, 350, 10)
+w4= Wall(154, 205,  50, 350, 250,350,10)
+w5= Wall(154, 205,  50, 350, 150,350,10)
+w6 = Wall(205, 154, 50, 350, 250, 350,10)
 
 # написи
 font.init()
@@ -105,6 +108,9 @@ while game:
         w1.draw_wall()
         w2.draw_wall()
         w3.draw_wall()
+        w4.draw_wall()
+        w5.draw_wall()
+        w6.draw_wall()
 
 
     # Ситуація "Програш"
